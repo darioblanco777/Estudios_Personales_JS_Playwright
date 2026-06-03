@@ -1,0 +1,84 @@
+/* El archivo de CSS o Cascade Style Sheet, es el que se encarga de darle estilos para poder ver mejor mi documento de HTML, además también de permitirnos adaprtalo a diferentes tamaños de pantallas.*/
+
+/*! CONECTAR-DEFINIR LOS ESTILOS */
+/* Los estilos se pueden aplicar de 3 maneras */
+/**CSS inline*/
+/* Se pueden poner los estilos a una etiqueta dentro de la misma etiqueta:*/
+/*? Ej:*/
+/* <h1 style="text-align: center;">Contacto<h1> */
+
+/**STYLE en el head*/
+/* Se define dentro del head de nuestro HTML con una etiqueta style*/
+/*? Ej:*/
+/* <head>
+<style>
+p{
+    text-align: center;
+}
+</style> 
+</head>*/
+
+/**style.css*/
+/* Se definen en un archivo aparte, y se enlaza de la siguiente manera con la etiqueta link:*/
+/*? Ej:*/
+/*  <link rel="stylesheet" href="./style.css" */
+
+/* Los estilos se aplican en casada, esto quiere decir que se aplican desde los padres hasta los hijos en HTML  */
+
+/* Los estilos CSS se enlazan */
+
+/* La manera de definir las etiquetas es la siguiente: */
+
+/*! ESPECIFICIDAD */
+/* La especificidad es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. */
+
+/*! COLORES */
+/* Los colores se pueden definir en rgb (255,0,255,80 los dos ultimos numeros son la transparencia, entonces se conocería como rgba), hexadecimal (#FF1177_ _ los dos ultimos digitos indican transparencia) */
+
+/*! SELECTORES */
+body {
+    background-color: aliceblue;
+    /* Esto va aplicar estilos a todo lo que esté dentro del BODY */
+}
+
+.clase {
+    color: brown;
+    /* de esta manera llamaremos las clases desde HTML para aplicarle estilos */
+}
+
+em strong {
+    font-family: sans-serif;
+    /* esto por ejemplo, va a aplicar un estilo a todos los STRONG que esten DENTRO de cualquier EM */
+}
+
+#ejemplo {
+    display: flex;
+}
+
+/*! PROPIEDADES */
+.ejemplo {
+    /** TRANSICIÓN */
+    transition: 1s background;
+    /* si agrego un selector sobre la misma clase, agregando :hover , puedo realizar un efecto de transición entre estilos */
+
+    /** TRANSFORMACIÓN */
+    transform: scale(1.2);
+    /* sirve para modificar el tamaño en escala, se puede usar con transition PERO se debe poner ALL luego de escoger el tiempo */
+    transform: rotate(2deg);
+    /* rota el objeto */
+    transform: scale(1.2) rotate(2deg);
+    /* rota y agranda el objeto */
+
+    /** SOMBRAS */
+    box-shadow: 10px 10px 30px 15px #000;
+    /* El primer dato es el eje X de la sombra con respecto a la imagen a la que le agregamos la sombra, el segundo es el eje Y, el tercero es la bifuminidad en pixeles, el cuarto parametro es "spread" o expansión de la sombra en pixeles, y el quinto parametro es el color. SE PUEDEN AGREGAR MÁS SOMBRAS O CUADROS ATRAS separados por comas */
+
+    /** OPACIDAD */
+    opacity: 0.3;
+}
+
+/*! MEDIA QUERY */
+/* Se usan para generar los diferentes estilos responsivos para presentar nuestra página en diferentes dispositivos */
+@media (max-width: 480px) {
+    /* A partir de aquí se comienza a aplicar los estilos responsivos que van a sobreescribirse en nuestra página al cumplir la condición, en este caso el max-width de 480px que indicamos al inicio */
+}
