@@ -1,0 +1,208 @@
+<!-- La primer página que se crea es index.html -->
+<!-- * Dentro de HTML hay normas que instituyen el uso de minusculas para los tags, sin embargo, si se usa mayuculas, el resultado no cambiará -->
+<!DOCTYPE html>
+<!--Esta etiqueta le indica al navegador que todo lo que voy a escribir esta en formato HTML5 -->
+<html lang="es">
+    <!-- Esta etiqueta le indica al navegador el idioma en que va a estar escrita la página -->
+    <head>
+        <!--Dentro de head va a ir todo lo que es importante para el navegador para cargar el proyecto pero que NO es visual para el usuario, ejemplos: la fuente de la letra, servidores, enlaces externos..etc -->
+        <meta charset="UTF-8" />
+        <!-- Es una etiqueta que se autocierra. UTF-8 es un standard de escritura que contiene todos los caracteres del español como las ñ, los acentos e incluso los EMOJIS-->
+        <meta
+            name="description"
+            content="Aquí va la descripción del contenido de esta página"
+        />
+        <!-- La descripción de la página ayuda a los buscadores a mostrar la información de nuestra página -->
+        <meta name="robots" content="index,follow" />
+        <!-- Este meta ayuda a los robots de los buscadores a buscar contenido en mi página para mejorar el posicionamiento. Si NO deseo que los robots entren a la misma, se puede indicar UNFOLLOW luego de index  -->
+        <meta name="viewport" content="width=device-width, initial-scale=1,0" />
+        <!-- Este meta nos ayuda a ver mejor la página, por ejemplo, al abrirla desde un celular, nos agranda la letra automaticamente, cuando es responsive, de lo contrartio la letra saldrá más pequeña, dando una mala experiencia al usuario  -->
+        <title>Este es el index</title>
+        <!--En esta etiqueta se pone el nombre de la página que será visualizado en la parte superior del navegador, generalmente en la pestaña del explorador -->
+        <link rel="stylesheet" href="./css/style.css" />
+        <!-- Esta es la etiqueta que nos enlaza la hoja de estilos de CSS. En este caso se creó una carpeta al nivel del index y adentro está la hoja de estilos en css -->
+    </head>
+
+    <body>
+        <!-- En el body van todas las lineas de código que se van a ver en pantalla -->
+        <!-- Existen 2 tipos de etiquetas principalmente:
+    Las etiquetas DE CONTENIDO: Son las que llevan el texto, las imágenes, los videos y todo lo que vemos dentro de nuestra página.
+    y las etiquetas CONTENEDORAS: Son las etiquetas que contienen otras etiquetas y le dan la estructura a la página. -->
+        <header>
+            <!-- Esta es la etiqueta que va a contener todo el encabezado de la página web -->
+            <nav>
+                <!-- Dentro de esta etiqueta va a ir toda la barra de navegacíon de mi página-->
+            </nav>
+        </header>
+        <main>
+            <!-- Generalmente va debajo de header y es donde irá todo el contenido principal-->
+            <section>
+                <!--Es una manera de dividir varias secciones dentro del main, el header o el footer -->
+                <div>
+                    <!-- Es la etiqueta que nos ayuda a crear divisiones lógicas dentro de nuestra página para separar el contenido -->
+                </div>
+                <article>
+                    <!--Una section puede contener varios articles-->
+                    <p>
+                        <!-- Esta etiqueta sirve para generar parrafos separados. -->
+                        <img src="./imagen.jpg" />
+                        <!-- Esta etiqueta me inserta una imagen en el documento, esta etiqueta no necesita etiqueta de cierre -->
+                        <em>
+                            <!-- Letra italica o cursiva -->
+                        </em>
+                        <strong>
+                            <!-- letra en negrita para resaltar algo importante de un parrafo. -->
+                        </strong>
+                    </p>
+                </article>
+            </section>
+
+            <!--! LISTAS -->
+            <ul>
+                <!--Unordered list es la manera de listar items sin orden y solo con viñetas-->
+                <li>Item</li>
+                <!--(list item) De esta manera se ingresan los items de una lista -->
+            </ul>
+            <ol>
+                <!--Orderd list es la manera de listar items de forma ordenada numericamente o alfabeticamente-->
+                <li>Item</li>
+                <!--(list item) De esta manera se ingresan los items de una lista y si es ol, serán números -->
+            </ol>
+
+            <!--! TABLAS -->
+            <table>
+                <!-- Con este tag se define la tabla -->
+                <thead>
+                    <!-- Este tag define el header de la tabla, es netamente semantico ya que podría hacerse con un div simplemente. -->
+                    <tr>
+                        <!-- Table row = fila de la tabla -->
+                        <th>Día</th>
+                        <!-- Table headers = se usa este tag para indicar los encabezados de la tabla, es unicamente semantico ya que se podría usar td pero es buena practica indicar los headers -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- define el cuerpo de la tabla -->
+                    <tr>
+                        <td>Lunes</td>
+                        <!-- define las celdas de cada "row" o fila -->
+                        <td>08h ~ 20h</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <!-- El pie de la tabla en caso de que lo contenga -->
+                </tfoot>
+            </table>
+
+            <!--! A HREF -->
+            <a target="_blank" href="https://www.google.com"
+                >Google<!-- Aquí se pone la palabra que aparecerá como link-->
+                <!-- La etiqueta <a> sirve para incluir enlaces hacia otros sitios de nuestra página o páginas externas. El enlace se pone dentro de las comillas de href-->
+                <!-- Target me permite abrir el link en una pestaña adicional -->
+            </a>
+
+            <!--! FORMULARIOS -->
+            <form action="/" method="post" id="opinion">
+                <!-- Esta etiqueta me permite decirle a HTML que voy a iniciar la creación de un formulario con el cual voy a solicitar información por parte del usuario para interactuar con ella. -->
+
+                <!--! INPUT TEXT -->
+                <!-- La etiqueta fieldset me ayuda a separar campos de datos en un formulario -->
+                <fieldset>
+                    <label for="name">Nombre: </label>
+                    <!-- Label nos permite colocar un texto que será el que descrbirá el campo input que vendrá a continuación. Siempre un input tipo texto, va acompañado de una etiqueta label. El atributo "for" dentro de la etiqueta, nos indica a cual input "id" pertenece-->
+                    <input
+                        id="lastname"
+                        type="password"
+                        placeholder="Apellido"
+                    />
+                    <!-- en la etiqueta input, tenemos el "id" que será único, tenemos "type" que indica el tipo de input, esto nos ayuda para que los exploradores nos den el formato que necesitamos para cada caso. "Placeholder" nos sirve para poner un texto predeterminado que irá en el espacio del input antes de poner algún texto-->
+                </fieldset>
+
+                <!--! INPUT RADIO -->
+                <!-- Seleccionará una única opción -->
+                <fieldset>
+                    <label for="city">Selecciona tu ciudad: </label>
+                    <input type="radio" name="city" value="Manizales" checked />
+                    Manizales
+                    <input type="radio" name="city" value="Medellin" /> Medellin
+                    <!-- Input radio es la opcion dentro de los formularios para seleccionar una única opcion de una lista, "name" lo usamos para que la selección de todos los que comparten name sea única. De tal manera que si no ponemos el atributo name, se podrían seleccionar varios radios al tiempo y no cumpliría su función. "checked" se usa para que aparezca una opción preseleccionada al cargar el formulario. "value" nos permite saber cual es el valor para poderlo tomar e interactuar con el formulario a través de JavaScript-->
+                    <legend>¿Cómo deseas que te contactemos?</legend>
+                    <!-- La etiqueta legend puede ser usada para dar titulo a secciones de nuestro formulario -->
+                    <label for="contact"
+                        ><input
+                            type="radio"
+                            name="contact"
+                            value="Whatsapp"
+                        />Whatsapp</label
+                    >
+                    <label for="contact"
+                        ><input
+                            type="radio"
+                            name="contact"
+                            value="Correo"
+                        />Correo</label
+                    >
+                    <!-- Esta es otra sintaxis para usar los input radio -->
+                </fieldset>
+
+                <!--! INPUT CHECKBOX -->
+                <!-- Selección multiple de una lista de opciones.-->
+                <fieldset>
+                    <label>Pelicula favorita: </label>
+                    <input type="checkbox" name="movie" value="pelicula1" />Top
+                    GUn
+                    <input
+                        type="checkbox"
+                        name="movie"
+                        value="pelicula2"
+                    />Zully
+                    <!-- No siempre el value tiene que tener exactamente el valor del input, en ocasiones, se puede cambiar conforme a sea necesario para luego trabajar esos datos en el servidor o en JavaScript -->
+                </fieldset>
+
+                <!--! SELECT -->
+                <!-- Sirve para seleccionar una opción de una lista deplegable-->
+                <fieldset>
+                    <label class="bold">Elige tu canción favorita:</label>
+                    <!-- A los labels también podemos añadir clases para llamarlas desde CSS -->
+                    <select id="Canciones">
+                        <option value="None" disabled selected>
+                            Selecciona tu canción
+                        </option>
+                        <!-- Para dejar una opción predefinida en nuestro select, podemos usar selected en una de las options, y disabled si deseamos que no se pueda escoger esta opción. -->
+                        <option value="Sweet child o' mine">
+                            Sweet child o' mine
+                        </option>
+                        <option value="I wanna love you">
+                            I wanna love you
+                        </option>
+                    </select>
+                </fieldset>
+
+                <!--! TEXTAREA -->
+                <!-- Introduce un area para ingresar texto-->
+                <fieldset>
+                    <textarea
+                        rows="4"
+                        cols="0"
+                        maxlength="20"
+                        form="opinion"
+                        placeholder="test"
+                        required
+                    >
+                        <!-- El required se puede incluir como parte de la comprobación que haremos de los inputs realizados -->
+                    </textarea>
+                </fieldset>
+
+                <!--! BUTTON -->
+                <fieldset>
+                    <button type="submit">SUBMIT</button>
+                    <button type="reset">RESET</button>
+                    <!-- Resetea todos los valores del form o los regresa a su valor inicial si hay alguno preseleccionado -->
+                </fieldset>
+            </form>
+        </main>
+        <footer><!--En esta sección va todo el pie de la página --></footer>
+    </body>
+    <script type="module" src="./src/index.js"></script>
+    ;
+    <!-- De esta manera se conectan los diferentes archivos de javascript en nuestro html -->
+</html>
