@@ -55,3 +55,4 @@
 // En JavaScript, las variables suelen nombrarse usando el CamelCase. ejp let MiCoche = "AMG 35 Mercedes Benz".
 // En JavaScript todos son objetos exceptuando los primitivos. 
 // Ejp: let MiNombre = null; console.log (typeof MiNombre); Aparecerá en consola que es un Objeto (Curioso)
+// Test Git Hub
