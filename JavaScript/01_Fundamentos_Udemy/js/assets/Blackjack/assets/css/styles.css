@@ -1,0 +1,31 @@
+body,html{
+    background-color: red;
+}
+
+
+.titulo{
+text-align:center ;
+background-color:black;
+color:white ;
+padding:20px;
+font: zise 20px;
+}
+
+.cartas-diseño{
+   width: 130px;
+   height: 150px;
+   position: relative;
+   margin-left: -75px;
+}
+
+.cartas-diseño-pc {
+   width: 130px;
+   height: 150px;
+   position: relative;
+   margin-left: -75px;
+}
+
+#jugador-cartas,#Computadora-cartas{
+    height: 220px;
+
+}
