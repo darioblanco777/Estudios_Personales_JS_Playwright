@@ -409,5 +409,3 @@ console.warn("Webpack") //  El bundler clásico y el estándar de la industria p
 console.warn("TurboPack") // TurboPack: El sucesor moderno de Webpack (construido en el lenguaje Rust). Está diseñado para ser extremadamente rápido 
 // y solucionar los problemas de lentitud de Webpack.
 console.warn("Vite") // Una herramienta de desarrollo ultrarrápida. A diferencia de los bundlers tradicionales, Vite no empaqueta todo el código en desarrollo; aprovecha los módulos nativos del navegador para que los cambios se reflejen al instante al guardar.
-// probemos que pasa despues de esto 
-// la quiero defecar a proposito 
